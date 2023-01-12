@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+
+{{#if conocido}}
+<p>Hola {{nombre}} <a href="/salir">Salir</a></p>
+
+<p>Aca podra acceder y modificar su pagina a gusto</p>
+
+{{/if}}
+
+{{#unless conocido}}
+<h2>Logueate</h2>
+
+<br>
+
+<p>Usuario</p>
+
+<form action="/ingresar" method="post">
+    <input type="text" name="nombre">
+    
+<p>Contraseña</p>
+
+<form action="/ingresar" method="post">
+    <input type="text" name="pass">
+
+<br>
+<br>
+
+<button>ingresar</button>
+{{/unless}}
